@@ -1,0 +1,12 @@
+---
+- hosts: master
+  vars:
+    k3s_control_node: true
+  roles:
+    - role: xanmanning.k3s
+
+- hosts: slave
+  vars:
+    k3s_control_node: true
+  roles:
+    - role: xanmanning.k3s
