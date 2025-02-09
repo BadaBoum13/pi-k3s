@@ -1,5 +1,6 @@
 ---
 # defaults file for bootstrap
+hostname: "{{ inventory_hostname }}"
 sshd: "ssh" #Name of ssh daemon, default is ssh.
 sshd_config: "/etc/ssh/sshd_config" #Path to ssh daemon config, default is /etc/ssh/sshd_config.
 ssh_identity_key: "{{ lookup('file', public.pub) }}" #Path to your identity key. Added to ~/.ssh/authorized_keys on remote host if both ssh_identity_key and ssh_user are defined.

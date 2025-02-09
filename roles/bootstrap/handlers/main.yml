@@ -1,3 +1,8 @@
 ---
 - name: restart sshd
   service: name={{ sshd }} state=restarted
+
+- name: restart system
+  ansible.builtin.reboot:
+    reboot_timeout: 600
+    test_command: whoami
